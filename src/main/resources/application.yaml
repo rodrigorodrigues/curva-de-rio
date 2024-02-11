@@ -1,0 +1,30 @@
+logging:
+  level:
+#    root: WARN
+   root: INFO
+#   root: DEBUG
+
+server:
+  compression:
+    enabled: true
+    min-response-size: 1024
+  port: ${SERVER_PORT:9999}
+  tomcat:
+    connection-timeout : 120000
+    max-connections: 1000
+
+spring:
+  application:
+    name: rinha-backend-2024
+  banner:
+    location: rinha2024.txt
+  data:
+    mongodb:
+      auto-index-creation: true
+      uri: ${MONGO_URI:mongodb://db:27017/rinha2024q1?socketTimeoutMS=360000&connectTimeoutMS=360000&maxPoolSize=50&minPoolSize=50}
+      database: rinha2024q1
+      writeConcern: UNACKNOWLEDGED
+  mvc:
+    async:
+      request-timeout: 600000
+

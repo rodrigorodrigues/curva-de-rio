@@ -1,0 +1,82 @@
+version: '3.9'
+name: 'rinha-de-backend-2'
+
+#  1.5 CPUs = 0.65 MongoDB + 2 x 0.4 Spring Boot + 0.05 NGinx
+#  550MB = 300MB MongoDB + 2 x 120 Spring Boot + 10MB NGinx
+
+services:
+  spring-api1:
+    #    image: boaglio/rinhabackend2024:latest
+    image: docker.io/library/rinhabackend2023:0.0.1-SNAPSHOT
+    hostname: spring-api1
+    environment:
+      - SERVER_PORT=8080
+      - MONGO_URI=mongodb://db-mongodb:27017/rinhadb?socketTimeoutMS=360000&connectTimeoutMS=360000&maxPoolSize=50&minPoolSize=50
+    depends_on:
+      - db-mongodb
+    ulimits:
+      nofile:
+        soft: 1000000
+        hard: 1000000
+    deploy:
+      resources:
+        limits:
+          cpus: '0.55'
+          memory: '1GB'
+    networks:
+      - app-network
+
+  spring-api2:
+    image: docker.io/library/rinhabackend2023:0.0.1-SNAPSHOT
+    hostname: spring-api2
+    environment:
+      - SERVER_PORT=8080
+      - MONGO_URI=mongodb://db-mongodb:27017/rinhadb?socketTimeoutMS=360000&connectTimeoutMS=360000&maxPoolSize=50&minPoolSize=50
+    depends_on:
+      - db-mongodb
+    ulimits:
+      nofile:
+        soft: 1000000
+        hard: 1000000
+    deploy:
+      resources:
+        limits:
+          cpus: '0.55'
+          memory: '1GB'
+    networks:
+      - app-network
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - spring-api1
+      - spring-api2
+    ports:
+      - "9999:9999"
+    networks:
+      - app-network
+    deploy:
+      resources:
+        limits:
+          cpus: '0.05'
+          memory: '0.1GB'
+
+  db:
+    container_name:  mongodb-curvaderio
+    image: mongo:7-jammy
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: '300MB'
+    networks:
+      - app-network
+
+networks:
+  app-network:
