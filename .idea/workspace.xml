@@ -5,38 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58574c25-4393-4326-a18d-4766b8c47564" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sobre-aws.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/api/ClienteAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/api/TransacaoAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/dto/ExtratoResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/exception/SemSaldoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/service/TransacaoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README-rinha.md" beforeDir="false" afterPath="$PROJECT_DIR$/README-rinha.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose-aws.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-aws.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose-local.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose-local.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-entrypoint-initdb.d/mongo-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/docker-entrypoint-initdb.d/mongo-init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load-test/user-files/simulations/rinhabackend/RinhaBackendCrebitosSimulation.scala" beforeDir="false" afterPath="$PROJECT_DIR$/load-test/user-files/simulations/rinhabackend/RinhaBackendCrebitosSimulation.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run-docker-build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build-jar-image.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/API.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/domain/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/ClienteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/repository/ClienteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/ExtratoResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/Saldo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/dto/Saldo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/Transacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/domain/Transacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/TransacaoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/repository/TransacaoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/TransacaoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/dto/TransacaoRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/TransacaoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/boaglio/rinhadebackend2024/dto/TransacaoResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rinha2024.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rinha2024.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,9 +27,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "contexts": [
+    {
+      "name": "docker-desktop"
+    }
+  ],
+  "isMigrated": true
+}]]></component>
+  <component name="KubernetesSettings">
+    <option name="contextName" value="docker-desktop" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/Cellar/php/8.2.0/bin/php" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -64,6 +55,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ACTIVE_CLOUD_PROJECT_ACCOUNT": "rodrigorodriguesweb@gmail.com",
+    "ACTIVE_CLOUD_PROJECT_ID": "api-project-646370370811",
+    "ACTIVE_CLOUD_PROJECT_NAME": "API Project",
+    "ACTIVE_CLOUD_PROJECT_NUMBER": "646370370811",
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.CurvaDeRio.executor": "Run",
@@ -71,13 +66,25 @@
     "Docker.compose.yaml.db: Compose Deployment.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.google.cloudcode.ide_session_index": "20240212_0000",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/fb/workspaces/github/curva-de-rio",
+    "last_opened_file_path": "/Users/rodrigo/IdeaProjects/curva-de-rio",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -91,7 +98,7 @@
       <recent name="com.boaglio.rinhadebackend2024" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.compose.yaml.db: Compose Deployment">
+  <component name="RunManager" selected="Application.CurvaDeRio">
     <configuration name="CurvaDeRio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.boaglio.rinhadebackend2024.CurvaDeRio" />
       <module name="curva-de-rio" />
@@ -118,8 +125,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CurvaDeRio" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="curva-de-rio" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.boaglio.rinhadebackend2024.CurvaDeRio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="compose.yaml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -151,8 +167,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707575881763</updated>
+      <workItem from="1707777769757" duration="1191000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.scala" />
@@ -171,6 +191,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
