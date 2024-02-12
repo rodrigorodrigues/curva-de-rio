@@ -2,6 +2,12 @@
 
 ![curva-de-rio.png](curva-de-rio.png)
 
+Rinha #2 - https://github.com/zanfranceschi/rinha-de-backend-2024-q1
+
+Fonte - https://github.com/boaglio/curva-de-rio 
+
+Já dizia o velho sábio:  _app Java com pouca memória é uma curva de rio_ 
+
 ##  Javinha na Rinha de back end 2024 Q1
 
 * Java 21
