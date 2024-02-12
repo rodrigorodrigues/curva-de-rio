@@ -1,4 +1,4 @@
-package com.boaglio.rinhadebackend2024;
+package com.boaglio.rinhadebackend2024.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -8,7 +8,7 @@ import java.time.ZonedDateTime;
 
 @Document(collection = "transacao")
 public class Transacao {
-    enum TipoTransacao { c,d } // credito / débito
+    public enum TipoTransacao { c,d } // credito / débito
     @Id
     String id;
     @Indexed
@@ -31,14 +31,6 @@ public class Transacao {
         return tipo.equals(TipoTransacao.c.name()) || tipo.equals(TipoTransacao.d.name());
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public Long getClienteId() {
-        return clienteId;
-    }
-
     public Long getValor() {
         return valor;
     }
@@ -53,5 +45,17 @@ public class Transacao {
 
     public String getRealizadaEm() {
         return realizadaEm;
+    }
+
+    @Override
+    public String toString() {
+        return "Transacao{" +
+                "id='" + id + '\'' +
+                ", clienteId=" + clienteId +
+                ", valor=" + valor +
+                ", tipo=" + tipo +
+                ", descricao='" + descricao + '\'' +
+                ", realizadaEm='" + realizadaEm + '\'' +
+                '}';
     }
 }

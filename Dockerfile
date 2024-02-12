@@ -15,4 +15,4 @@ COPY --from=BUILD /app/target/curva-de-rio-0.0.1-SNAPSHOT.jar /rinha.jar
 
 EXPOSE 8080
 
-ENTRYPOINT [ "java", "-XX:+UseParallelGC", "-XX:MaxRAMPercentage=75", "-jar", "./rinha.jar" ]
+ENTRYPOINT [ "java","-jar", "./rinha.jar" ]

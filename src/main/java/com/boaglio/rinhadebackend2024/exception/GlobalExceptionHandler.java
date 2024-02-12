@@ -1,4 +1,4 @@
-package com.boaglio.rinhadebackend2024;
+package com.boaglio.rinhadebackend2024.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +12,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Object> handleGlobalExceptions(Exception ex, WebRequest request) {
 
-        HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR;
+        var status = HttpStatus.INTERNAL_SERVER_ERROR;
 
         // erros 400 precisam voltar 422
         if (ex instanceof org.springframework.web.bind.MethodArgumentNotValidException ||

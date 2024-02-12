@@ -1,7 +1,7 @@
 logging:
   level:
-#    root: WARN
-   root: INFO
+    root: WARN
+#   root: INFO
 #   root: DEBUG
 
 server:
@@ -21,10 +21,13 @@ spring:
   data:
     mongodb:
       auto-index-creation: true
-      uri: ${MONGO_URI:mongodb://db:27017/rinha2024q1?socketTimeoutMS=360000&connectTimeoutMS=360000&maxPoolSize=50&minPoolSize=50}
+      uri: ${MONGO_URI:mongodb://localhost:27017/rinha2024q1?socketTimeoutMS=360000&connectTimeoutMS=360000&maxPoolSize=50&minPoolSize=50}
       database: rinha2024q1
-      writeConcern: UNACKNOWLEDGED
   mvc:
     async:
       request-timeout: 600000
 
+# com pouca memoria nao fica bom
+#  threads:
+#    virtual:
+#      enabled: true

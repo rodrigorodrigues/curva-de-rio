@@ -1,19 +1,19 @@
 version: '3.9'
 name: 'rinha-de-backend-2'
 
-#  1.5 CPUs = 0.65 MongoDB + 2 x 0.4 Spring Boot + 0.05 NGinx
-#  550MB = 300MB MongoDB + 2 x 120 Spring Boot + 10MB NGinx
+#  1.5 CPUs =   0.6 MongoDB +   2 x     0.45 Spring Boot +     0.2 NGinx
+#  550MB = 240MB MongoDB + 2 x 140MB Spring Boot + 30MB NGinx
 
 services:
-  spring-api1:
-    #    image: boaglio/rinhabackend2024:latest
-    image: docker.io/library/rinhabackend2023:0.0.1-SNAPSHOT
+  spring-api1: &api
+#    image: docker.io/library/curva-de-rio:0.0.1-SNAPSHOT  # com GraalVM
+    image: docker.io/boaglio/curva-de-rio:latest  # sem GraalVM
     hostname: spring-api1
     environment:
       - SERVER_PORT=8080
-      - MONGO_URI=mongodb://db-mongodb:27017/rinhadb?socketTimeoutMS=360000&connectTimeoutMS=360000&maxPoolSize=50&minPoolSize=50
+      - MONGO_URI=mongodb://db:27017/rinhadb?socketTimeoutMS=360000&connectTimeoutMS=360000&maxPoolSize=10&minPoolSize=5
     depends_on:
-      - db-mongodb
+      - db
     ulimits:
       nofile:
         soft: 1000000
@@ -21,30 +21,14 @@ services:
     deploy:
       resources:
         limits:
-          cpus: '0.55'
-          memory: '1GB'
+          cpus: '0.45'
+          memory: '140MB'
     networks:
       - app-network
 
   spring-api2:
-    image: docker.io/library/rinhabackend2023:0.0.1-SNAPSHOT
+    <<: *api
     hostname: spring-api2
-    environment:
-      - SERVER_PORT=8080
-      - MONGO_URI=mongodb://db-mongodb:27017/rinhadb?socketTimeoutMS=360000&connectTimeoutMS=360000&maxPoolSize=50&minPoolSize=50
-    depends_on:
-      - db-mongodb
-    ulimits:
-      nofile:
-        soft: 1000000
-        hard: 1000000
-    deploy:
-      resources:
-        limits:
-          cpus: '0.55'
-          memory: '1GB'
-    networks:
-      - app-network
 
   nginx:
     image: nginx:latest
@@ -55,26 +39,32 @@ services:
       - spring-api2
     ports:
       - "9999:9999"
-    networks:
-      - app-network
     deploy:
       resources:
         limits:
-          cpus: '0.05'
-          memory: '0.1GB'
+          cpus: '0.2'
+          memory: '30MB'
+    networks:
+      - app-network
 
   db:
-    container_name:  mongodb-curvaderio
     image: mongo:7-jammy
-    ports:
-      - "27017:27017"
+    hostname: db
     volumes:
       - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
     deploy:
       resources:
         limits:
-          cpus: '0.5'
-          memory: '300MB'
+          cpus: '0.4'
+          memory: '240MB'
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/test --quiet
+      interval: 5s
+      timeout: 10s
+      retries: 5
+      start_period: 5s
+    ports:
+      - "27017:27017"
     networks:
       - app-network
 

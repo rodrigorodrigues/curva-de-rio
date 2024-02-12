@@ -3,16 +3,12 @@ version: '3.9'
 services:
   db:
     container_name:  mongodb-curvaderio
-    image: mongo:7-jammy
-    ports:
-      - "27017:27017"
+    image: mongo:7
+    network_mode: host
     volumes:
       - ./docker-entrypoint-initdb.d/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
     deploy:
       resources:
         limits:
-          cpus: '0.5'
-          memory: '300MB'
-
-networks:
-  app-network:
+          cpus: '0.6'
+          memory: '200MB'
